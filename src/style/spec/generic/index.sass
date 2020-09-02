@@ -1,0 +1,42 @@
+html, html a, body
+  height: 100%
+
+a
+  -webkit-font-smoothing: antialiased
+
+body
+  font-family: $font-primary
+  font-size: 14px
+  line-height: 1.5
+  letter-spacing: 0.2px
+  overflow-x: hidden
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  letter-spacing: 0.5px
+  line-height: 1.5
+  
+  small
+    font-weight: 300
+
+a
+  &:hover,
+  &:focus
+    text-decoration: none
+    color: darken($default-info, 10%)
+
+  &:focus
+    outline: none
+
+\:focus
+  outline: none
+
+hr
+  border-top: 1px solid $border-color
+
+.btn-slim
+  padding: 1px 4px

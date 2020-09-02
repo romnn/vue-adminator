@@ -1,0 +1,30 @@
+language: node_js
+node_js:
+  - 14
+os:
+- linux
+jobs:
+  include:
+  - stage: deploy
+    name: Publish preview
+    script:
+    - npm run build
+    - touch ./dist/.nojekyll
+    deploy:
+      provider: pages
+      local_dir: dist
+      skip_cleanup: true
+      # Generate a GitHub access token for public repositories
+      # In your travis ci settings, set the token as a secret environment variable $GH_TOKEN
+      token: "$GH_TOKEN"
+      keep_history: true
+      on:
+        repo: romnnn/vue-adminator
+        tags: false
+        branches:
+          only:
+            - master
+before_script:
+- npm install
+script:
+- npm run build
