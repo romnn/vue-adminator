@@ -10,7 +10,7 @@ jobs:
     script:
     - export VUE_APP_ROUTER_MODE=hash
     # - export VUE_APP_ROUTER_BASE=vue-adminator/
-    - export VUE_APP_PUBLIC_PATH=vue-adminator/
+    - export VUE_APP_PUBLIC_PATH=./
     - npm run build
     - touch ./dist/.nojekyll
     deploy:
