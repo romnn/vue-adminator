@@ -1,5 +1,5 @@
 import Vue from "vue";
-import VueRouter, { RouteConfig, RawLocation, Route } from "vue-router";
+import VueRouter, { RouteConfig, RawLocation, Route, RouterMode } from "vue-router";
 import Adminator from "../views/Adminator.vue";
 import Error from "../views/Error.vue";
 import Landing from "../views/Landing.vue";
@@ -222,8 +222,8 @@ const routes: Array<RouteConfig> = [
 ];
 
 const router = new VueRouter({
-  mode: "history",
-  base: process.env.BASE_URL,
+  mode: process.env.VUE_APP_ROUTER_MODE as RouterMode,
+  base: process.env.VUE_APP_ROUTER_BASE,
   routes
 });
 

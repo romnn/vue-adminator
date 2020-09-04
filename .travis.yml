@@ -8,6 +8,9 @@ jobs:
   - stage: deploy
     name: Publish preview
     script:
+    - export VUE_APP_ROUTER_MODE=hash
+    - export VUE_APP_ROUTER_BASE=vue-adminator/
+    - export VUE_APP_PUBLIC_PATH=vue-adminator/
     - npm run build
     - touch ./dist/.nojekyll
     deploy:
