@@ -13,7 +13,7 @@
     "@fullcalendar/daygrid": "^5.3.0",
     "@fullcalendar/interaction": "^5.3.0",
     "@fullcalendar/vue": "^5.3.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.16.0",
     "chart.js": "^2.9.3",
